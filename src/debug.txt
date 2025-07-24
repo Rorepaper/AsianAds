@@ -1,6 +1,0 @@
-Array
-(
-    [name] => e
-    [comment] => e
-    [video_id] => 1
-)

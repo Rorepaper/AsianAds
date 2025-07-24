@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,142 +8,131 @@
     <meta name="theme-color" content="#000000">
     <title>Азиатская реклама</title>
 
-<script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function () {
-      navigator.serviceWorker.register('serviceworker.js')
-        .then(function (registration) {
-          console.log('ServiceWorker зарегистрирован:', registration);
-        }, function (err) {
-          console.log('ServiceWorker ошибка:', err);
-        });
-    });
-  }
-</script>
-    
+    <script>
         if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/service-worker.js')
-                    .then(registration => {
-                        console.log('ServiceWorker registration successful');
-                    })
-                    .catch(err => {
-                        console.log('ServiceWorker registration failed: ', err);
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('serviceworker.js')
+                    .then(function (registration) {
+                        console.log('ServiceWorker зарегистрирован:', registration);
+                    }, function (err) {
+                        console.log('ServiceWorker ошибка:', err);
                     });
             });
         }
     </script>
-
+    
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 
 
 </head>
 
 <body>
-<!-- Header -->
-<header class="d-flex flex-wrap justify-content-between py-3 mb-4 border-bottom fixed-top heading">
-    <div class="d-flex align-items-center mb-3 mb-md-0 me-md-auto">
-        <h1 class="ps-3 me-3">AsianAds</h1>
-        <nav class="nav nav-pills">
-            <a href="index.html" class="nav-link px-2 link-dark active">Главная</a>
-            <a href="roof.html" class="nav-link px-2 link-dark">Реклама про кровлю</a>
-            <a href="milk.html" class="nav-link px-2 link-dark">Реклама про молоко</a>
-        </nav>
-    </div>
-</header>
-<header class="d-flex flex-wrap justify-content-between mb-4 border-bottom heading">
-    <div class="d-flex align-items-center mb-3 mb-md-0 me-md-auto">
-        <h1 class="ps-3 me-3">AsianAds</h1>
-        <nav class="nav nav-pills">
-            <a href="index.html" class="nav-link px-2 link-dark active">Главная</a>
-            <a href="roof.html" class="nav-link px-2 link-dark">Реклама про кровлю</a>
-            <a href="milk.html" class="nav-link px-2 link-dark">Реклама про молоко</a>
-        </nav>
-    </div>
-</header>
-<!-- Sidebar -->
-<div class="ps-4 text-white col-2 position-fixed h-100 navi_bar">
-    <h4 class="pt-3">Навигация по странице</h4>
-    <hr>
-    <ul class="nav nav-pills flex-column mb-auto">
-        <li class="nav-item"><a href="#s1" class="nav-link text-white">Наверх</a></li>
-        <li class="nav-item"><a href="#s2" class="nav-link text-white">Что такое?</a></li>
-        <li class="nav-item"><a href="#s3" class="nav-link text-white">Сравнение</a></li>
-    </ul>
-</div>
-
-
-<!-- Main Content -->
-<div class="container-fluid mainBg">
-    <main class="row col-md-7 offset-md-3 bg-body">
-        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-            <h1 id="s2">Японская реклама</h1>
+    <!-- Header -->
+    <header class="d-flex flex-wrap justify-content-between py-3 mb-4 border-bottom fixed-top heading">
+        <div class="d-flex align-items-center mb-3 mb-md-0 me-md-auto">
+            <h1 class="ps-3 me-3">AsianAds</h1>
+            <nav class="nav nav-pills">
+                <a href="index.html" class="nav-link px-2 link-dark active">Главная</a>
+                <a href="roof.html" class="nav-link px-2 link-dark">Реклама про кровлю</a>
+                <a href="milk.html" class="nav-link px-2 link-dark">Реклама про молоко</a>
+            </nav>
         </div>
+    </header>
+    <header class="d-flex flex-wrap justify-content-between mb-4 border-bottom heading">
+        <div class="d-flex align-items-center mb-3 mb-md-0 me-md-auto">
+            <h1 class="ps-3 me-3">AsianAds</h1>
+            <nav class="nav nav-pills">
+                <a href="index.html" class="nav-link px-2 link-dark active">Главная</a>
+                <a href="roof.html" class="nav-link px-2 link-dark">Реклама про кровлю</a>
+                <a href="milk.html" class="nav-link px-2 link-dark">Реклама про молоко</a>
+            </nav>
+        </div>
+    </header>
+    <!-- Sidebar -->
+    <div class="ps-4 text-white col-2 position-fixed h-100 navi_bar">
+        <h4 class="pt-3">Навигация по странице</h4>
+        <hr>
+        <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item"><a href="#s1" class="nav-link text-white">Наверх</a></li>
+            <li class="nav-item"><a href="#s2" class="nav-link text-white">Что такое?</a></li>
+            <li class="nav-item"><a href="#s3" class="nav-link text-white">Сравнение</a></li>
+        </ul>
+    </div>
 
-        <div class="mainText text-body">
-            <p>Наверное каждому человеку, который много сидит в интернете, хотя бы раз попадалась странная
-                азиатская реклама. Все у японцев по другому, реклама не исключение.
-                Если структура западной рекламы обычно предсказуема, не шокирует и обращает внимание
-                исключительно
-                на рекламируемый товар, то азиатская зачастую ломает все шаблоны и стереотипы. Открыв очередной
-                ролик, вы не сможете понять, что происходит, что рекламируют, даже сложно понять реклама ли это
-                вообще.</p>
 
-            <div class="my-4">
-                <img src="img/japan.jpg" alt="Азиатская реклама" class="img-fluid rounded shadow-sm">
+    <!-- Main Content -->
+    <div class="container-fluid mainBg">
+        <main class="row col-md-7 offset-md-3 bg-body">
+            <div
+                class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 id="s2">Японская реклама</h1>
             </div>
 
-            <p id="s3">Это интересное маркетинговое решение, ведь обычно люди не смотрят рекламу. Например, если автор
-                развлекательного видео делает подводку к рекламной интеграции, то зритель моментально поймет,
-                что
-                это реклама и пропустит её.
-                Чтобы такого не случилось, необходимо, чтобы реклама была непредсказуемой, интересной и
-                увлекательной.</p>
+            <div class="mainText text-body">
+                <p>Наверное каждому человеку, который много сидит в интернете, хотя бы раз попадалась странная
+                    азиатская реклама. Все у японцев по другому, реклама не исключение.
+                    Если структура западной рекламы обычно предсказуема, не шокирует и обращает внимание
+                    исключительно
+                    на рекламируемый товар, то азиатская зачастую ломает все шаблоны и стереотипы. Открыв очередной
+                    ролик, вы не сможете понять, что происходит, что рекламируют, даже сложно понять реклама ли это
+                    вообще.</p>
 
-        </div>
-    </main>
-</div>
+                <div class="my-4">
+                    <img src="img/japan.jpg" alt="Азиатская реклама" class="img-fluid rounded shadow-sm">
+                </div>
 
+                <p id="s3">Это интересное маркетинговое решение, ведь обычно люди не смотрят рекламу. Например, если
+                    автор
+                    развлекательного видео делает подводку к рекламной интеграции, то зритель моментально поймет,
+                    что
+                    это реклама и пропустит её.
+                    Чтобы такого не случилось, необходимо, чтобы реклама была непредсказуемой, интересной и
+                    увлекательной.</p>
 
-<!-- Footer -->
-<footer class="zindex-sticky">
-    <div class="container p-4">
-        <div class="row">
-            <div class="col-lg-6 col-md-12">
-                <h5 class="mb-3 text-dark">О сайте:</h5>
-                <p>
-                    Данный сайт создан с целью популяризации японской рекламы. А также для углубления знаний в
-                    японской культуре.
-                </p>
             </div>
-            <div class="col-lg-3 col-md-6 mb-4 offset-2">
-                <h5 class="mb-3 text-dark">Ссылки</h5>
-                <div class="row">
-                    <div class="col-6">
-                        <ul class="list-unstyled mb-0">
-                            <li class="mb-1"><a href="#" style="color: #4f4f4f;">ЧАВО</a></li>
-                            <li class="mb-1"><a href="#" style="color: #4f4f4f;">Уроки</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-6">
-                        <ul class="list-unstyled mb-0">
-                            <li class="mb-1"><a href="#" style="color: #4f4f4f;">Цена</a></li>
-                            <li class="mb-1"><a href="#" style="color: #4f4f4f;">Безопасность</a></li>
-                        </ul>
+        </main>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="zindex-sticky">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <h5 class="mb-3 text-dark">О сайте:</h5>
+                    <p>
+                        Данный сайт создан с целью популяризации японской рекламы. А также для углубления знаний в
+                        японской культуре.
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 offset-2">
+                    <h5 class="mb-3 text-dark">Ссылки</h5>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-1"><a href="#" style="color: #4f4f4f;">ЧАВО</a></li>
+                                <li class="mb-1"><a href="#" style="color: #4f4f4f;">Уроки</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-1"><a href="#" style="color: #4f4f4f;">Цена</a></li>
+                                <li class="mb-1"><a href="#" style="color: #4f4f4f;">Безопасность</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
 
+            </div>
         </div>
-    </div>
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        © 2025 Copyright:
-        <a class="text-dark" href="https://rorepaper.com/">Rorepaper Inc</a>
-    </div>
-</footer>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2025 Copyright:
+            <a class="text-dark" href="https://rorepaper.com/">Rorepaper Inc</a>
+        </div>
+    </footer>
 </body>
 
 

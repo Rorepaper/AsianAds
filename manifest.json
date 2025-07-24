@@ -1,18 +1,20 @@
 {
-  "name": "Азиатская реклама",
-  "short_name": "AsianAds",
-  "description": "Приложение для хостинга японских реклам",
+  "name": "Реклама",
+  "short_name": "Реклама",
+  "description": "Реклама",
   "start_url": "./index.html",
   "display": "standalone",
+  "background_color": "#d5ebe7",
+  "theme_color": "#6294b3",
   "icons": [
     {
-      "src": "img/192.png",
+      "src": "192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "img/512.png",
+      "src": "512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
@@ -20,14 +22,14 @@
   ],
   "screenshots": [
     {
-      "src": "desktop.png",
-      "sizes": "1300x700",
+      "src": "screenshots/desktop.png",
+      "sizes": "1280x720",
       "type": "image/png",
       "form_factor": "wide"
     },
     {
-      "src": "mobile.png",
-      "sizes": "700x300",
+      "src": "screenshots/mobile.png",
+      "sizes": "640x320",
       "type": "image/png"
     }
   ],

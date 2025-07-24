@@ -7,10 +7,19 @@
     <meta name="theme-color" content="#000000">
     <title>Азиатская реклама</title>
 
-
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/reacts.js"></script>
-    <script>
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('serviceworker.js')
+        .then(function (registration) {
+          console.log('ServiceWorker зарегистрирован:', registration);
+        }, function (err) {
+          console.log('ServiceWorker ошибка:', err);
+        });
+    });
+  }
+</script>
+    
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('/service-worker.js')

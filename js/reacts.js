@@ -1,6 +1,6 @@
 
-function hideElement(elem) {
-    elem.style.display = 'none';
+function hideElement() {
+    document.getElementById('navi_bar').style.display = 'none';
   }
 
 function getVideo() {

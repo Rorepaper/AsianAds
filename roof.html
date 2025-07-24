@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Азиатская реклама</title>
+
+
+  <script src="js/bootstrap.bundle.min.js"
+          integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+          crossorigin="anonymous"></script>
+  <script src="js/reacts.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Загружаем данные о видео
+      getVideo();
+
+      // Обработчик для кнопок сортировки
+      const sortDropdown = document.getElementById('sortDropdown');
+      const sortItems = document.querySelectorAll('.dropdown-item');
+
+      sortItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+          e.preventDefault();
+          const order = this.dataset.order;
+          sortDropdown.textContent = this.textContent;
+          console.log('Выбран порядок:', order);
+          sortComments(order);
+        });
+      });
+
+      // Функция для сортировки комментариев
+      function sortComments(order) {
+        const comments = Array.from(document.querySelectorAll('.comment'));
+        console.log('Найдено комментариев:', comments.length);
+
+        switch(order) {
+          case '1': // По дате (новые вверху)
+            console.log('Сортировка по дате (новые вверху)');
+            comments.sort((a, b) => {
+              const dateA = a.querySelector('.comment-date').textContent;
+              const dateB = b.querySelector('.comment-date').textContent;
+              console.log('Сравниваем даты:', dateA, dateB);
+              return dateB.localeCompare(dateA);
+            });
+            break;
+
+          case '2': // По дате (старые вверху)
+            console.log('Сортировка по дате (старые вверху)');
+            comments.sort((a, b) => {
+              const dateA = a.querySelector('.comment-date').textContent;
+              const dateB = b.querySelector('.comment-date').textContent;
+              console.log('Сравниваем даты:', dateA, dateB);
+              return dateA.localeCompare(dateB);
+            });
+            break;
+
+          case '3': // По лайкам
+            console.log('Сортировка по лайкам');
+            comments.sort((a, b) => {
+              const likesA = parseInt(a.querySelector('.comment-likes').textContent) || 0;
+              const likesB = parseInt(b.querySelector('.comment-likes').textContent) || 0;
+              console.log('Сравниваем лайки:', likesA, likesB);
+              return likesB - likesA;
+            });
+            break;
+        }
+
+        // Перерисовываем комментарии в отсортированном порядке
+        const commentsContainer = document.getElementById('comments');
+        console.log('Контейнер комментариев:', commentsContainer);
+
+        // Очищаем контейнер и добавляем комментарии заново
+        commentsContainer.innerHTML = '';
+        comments.forEach(comment => commentsContainer.appendChild(comment));
+
+        console.log('Сортировка завершена');
+      }
+
+      // Main reactions
+      const reactions = {
+        'heart': {count: 1517, isActive: false},
+        'chat': {count: 33, isActive: false},
+        'bookmark': {count: 157, isActive: false}
+      };
+
+      const reactionElements = document.querySelectorAll('.reaction-item');
+
+      reactionElements.forEach(element => {
+        element.addEventListener('click', function () {
+          const icon = this.querySelector('i');
+          const count = this.querySelector('span');
+          const type = icon.classList[1].split('bi-')[1];
+
+          if (reactions[type].isActive) {
+            icon.classList.remove('active');
+            reactions[type].count--;
+            reactions[type].isActive = false;
+            count.textContent = reactions[type].count;
+          } else {
+            icon.classList.add('active');
+            reactions[type].count++;
+            reactions[type].isActive = true;
+            count.textContent = reactions[type].count;
+          }
+
+          icon.classList.add('animate');
+          setTimeout(() => {
+            icon.classList.remove('animate');
+          }, 500);
+        });
+      });
+
+      // Comment likes
+      const commentLikes = document.querySelectorAll('.comment-actions .bi-heart');
+      commentLikes.forEach(heart => {
+        heart.addEventListener('click', function (e) {
+          e.stopPropagation();
+          const currentLikes = parseInt(this.nextElementSibling.textContent);
+          const commentId = this.dataset.commentId;
+          toggleCommentLike(this, commentId, currentLikes);
+        });
+      });
+
+      // Comment form
+      const commentForm = document.getElementById('comment-form');
+      if (commentForm) {
+        commentForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          const commentInput = this.querySelector('textarea');
+          const commentText = commentInput.value.trim();
+          if (commentText) {
+            // Получаем данные из формы
+            const nameInput = document.getElementById('comment-name');
+            const userName = nameInput.value.trim() || 'Анонимный пользователь';
+
+            const commentData = {
+              name: userName,
+              comment: commentInput.value,
+              video_id: document.querySelector('input[name="video_id"]').value
+            };
+
+            // Отладочный вывод
+            console.log('Отправляем данные:', commentData);
+
+            // Отправляем данные как JSON
+            fetch('src/addComment.php', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(commentData)
+            })
+                    .then(response => response.json())
+                    .then(data => {
+                      if (data.success) {
+                        // Очищаем форму
+                        commentInput.value = '';
+                        document.getElementById('comment-name').value = '';
+
+                        // Добавляем новый комментарий в список
+                        const commentsContainer = document.getElementById('comments');
+                        const commentElement = document.createElement('div');
+                        commentElement.className = 'comment';
+                        commentElement.innerHTML = `
+                                    <div class="comment-header">
+                                        <span class="comment-author">${data.comment.name}</span>
+                                        <span class="comment-date">${data.comment.date}</span>
+                                    </div>
+                                    <div class="comment-content">${data.comment.comment}</div>
+                                    <div class="comment-actions">
+                                        <i class="bi bi-heart fs-6 me-2"
+                                           data-comment-id="${data.comment.id}"
+                                           onclick="toggleCommentLike(this, ${data.comment.id}, ${data.comment.likes})"></i>
+                                        <span class="comment-likes" id="likes-${data.comment.id}">${data.comment.likes}</span>
+                                    </div>
+                                `;
+                        commentsContainer.appendChild(commentElement);
+
+                        // Получаем текущий порядок сортировки
+                        const currentOrder = sortDropdown.querySelector('.dropdown-item.active')?.dataset.order || '1';
+                        // Сортируем комментарии с учетом нового
+                        sortComments(currentOrder);
+
+                        // Обновляем счетчик комментариев в реакциях
+                        const chatReaction = document.querySelector('.bi-chat');
+                        const chatCount = chatReaction.nextElementSibling;
+                        const currentCount = parseInt(chatCount.textContent) || 0;
+                        chatCount.textContent = currentCount + 1;
+
+                        // Добавляем обработчик для кнопки лайка
+                        const heart = commentElement.querySelector('.bi-heart');
+                        if (heart) {
+                          heart.addEventListener('click', function(e) {
+                            e.stopPropagation();
+                            const currentLikes = parseInt(this.nextElementSibling.textContent);
+                            const commentId = this.dataset.commentId;
+                            toggleCommentLike(this, commentId, currentLikes);
+                          });
+                        }
+                      }
+                    })
+                    .catch(error => console.error('Ошибка при отправке комментария:', error));
+          }
+        });
+      }
+    });
+  </script>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+
+</head>
+
+<p id="vid" hidden>2</p>
+<p id="order" hidden>1</p>
+
+<body>
+<!-- Header -->
+<header class="d-flex flex-wrap justify-content-between py-3 mb-4 border-bottom fixed-top heading">
+  <div class="d-flex align-items-center mb-3 mb-md-0 me-md-auto">
+    <h1 class="ps-3 me-3">AsianAds</h1>
+    <nav class="nav nav-pills">
+      <a href="index.html" class="nav-link px-2 link-dark ">Главная</a>
+      <a href="roof.html" class="nav-link px-2 link-dark active">Реклама про кровлю</a>
+      <a href="milk.html" class="nav-link px-2 link-dark">Реклама про молоко</a>
+    </nav>
+  </div>
+</header>
+<header class="d-flex flex-wrap justify-content-between mb-4 border-bottom heading">
+  <div class="d-flex align-items-center mb-3 mb-md-0 me-md-auto">
+    <h1 class="ps-3 me-3">AsianAds</h1>
+    <nav class="nav nav-pills">
+      <a href="index.html" class="nav-link px-2 link-dark active">Главная</a>
+      <a href="roof.html" class="nav-link px-2 link-dark">Реклама про кровлю</a>
+      <a href="milk.html" class="nav-link px-2 link-dark">Реклама про молоко</a>
+    </nav>
+  </div>
+</header>
+
+
+<!-- Reactions -->
+<aside class="position-fixed top-0 end-0 vh-100 p-3 d-flex flex-column align-items-center justify-content-start">
+  <div class="reactions text-center">
+    <div class="reaction-item mb-3">
+      <i class="bi bi-heart fs-5"></i><br>
+      <span class="small">1517</span>
+    </div>
+    <div class="reaction-item mb-3">
+      <i class="bi bi-chat fs-5"></i><br>
+      <span class="small">33</span>
+    </div>
+    <div class="reaction-item mb-3">
+      <i class="bi bi-bookmark fs-5"></i><br>
+      <span class="small">157</span>
+    </div>
+    <div class="reaction-item mb-3">
+      <i class="bi bi-arrow-left-right fs-5"></i><br>
+    </div>
+    <div class="reaction-item">
+      <i class="bi bi-three-dots fs-5"></i>
+    </div>
+  </div>
+</aside>
+
+
+<!-- Navigation Sidebar -->
+<div class="ps-2 text-white col-2 position-fixed h-100 navi_bar">
+  <h4 class="pt-3">Навигация по странице</h4>
+  <hr>
+  <ul class="nav nav-pills flex-column mb-auto">
+    <li class="nav-item"><a href="#s1" class="nav-link text-white">Наверх</a></li>
+    <li class="nav-item"><a href="#s2" class="nav-link text-white">Что такое?</a></li>
+    <li class="nav-item"><a href="#s3" class="nav-link text-white">Сравнение</a></li>
+  </ul>
+</div>
+
+
+<?php require_once 'includes/video_data.php'; ?>
+<!-- Main Content -->
+<div class="row container-fluid mainBg">
+  <main class="col-md-7 offset-md-3 bg-body">
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+      <h1 id="vidName"></h1>
+    </div>
+
+    <div class="mainText text-body">
+      <div class="video-likes mb-3" id="vidLikes"></div>
+      <div class="video-description" id="vidDesc"></div>
+      <div class="ratio ratio-16x9 mb-3">
+        <video controls class="w-100">
+          <source src="img/roof.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <p id="s3"></p>
+    </div>
+    <!-- Comments Section -->
+    <section class="comments-section bg-body mt-5 p-4">
+      <h2 class="mb-4">Комментарии</h2>
+
+      <!-- Add Comment Form -->
+      <div class="card mb-4">
+        <div class="card-body">
+          <form class="mb-4" id="comment-form">
+            <div class="mb-3">
+              <label for="comment-name" class="form-label">Ваше имя</label>
+              <input type="text" class="form-control" id="comment-name" name="comment-name" required>
+            </div>
+            <div class="mb-3">
+              <label for="comment-text" class="form-label">Комментарий</label>
+              <textarea class="form-control" id="comment-text" name="comment-text" rows="3"
+                        required></textarea>
+            </div>
+            <input type="hidden" name="video_id" value="1">
+            <button type="submit" class="btn btn-primary">Добавить комментарий</button>
+          </form>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="sortDropdown" data-bs-toggle="dropdown">
+          Сортировка
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#" data-order="1">По дате (новые вверху)</a></li>
+          <li><a class="dropdown-item" href="#" data-order="2">По дате (старые вверху)</a></li>
+          <li><a class="dropdown-item" href="#" data-order="3">По лайкам</a></li>
+        </ul>
+      </div>
+      <div id="comments"></div>
+    </section>
+  </main>
+</div>
+
+
+<!-- Footer -->
+<footer class="zindex-sticky">
+  <div class="container p-4">
+    <div class="row">
+      <div class="col-lg-6 col-md-12">
+        <h5 class="mb-3 text-dark">О сайте:</h5>
+        <p>
+          Данный сайт создан с целью популяризации японской рекламы. А также для углубления знаний в
+          японской культуре.
+        </p>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4 offset-2">
+        <h5 class="mb-3 text-dark">Ссылки</h5>
+        <div class="row">
+          <div class="col-6">
+            <ul class="list-unstyled mb-0">
+              <li class="mb-1"><a href="#" style="color: #4f4f4f;">ЧАВО</a></li>
+              <li class="mb-1"><a href="#" style="color: #4f4f4f;">Уроки</a></li>
+            </ul>
+          </div>
+          <div class="col-6">
+            <ul class="list-unstyled mb-0">
+              <li class="mb-1"><a href="#" style="color: #4f4f4f;">Цена</a></li>
+              <li class="mb-1"><a href="#" style="color: #4f4f4f;">Безопасность</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2025 Copyright:
+    <a class="text-dark" href="https://rorepaper.com/">Rorepaper Inc</a>
+  </div>
+</footer>
+</body>
+
+

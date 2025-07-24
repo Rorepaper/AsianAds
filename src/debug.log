@@ -1,0 +1,898 @@
+Received data: name=, comment=, video_id=0
+Received data: name=й, comment=й, video_id=1
+Received data: name=й, comment=й, video_id=1
+Received data: name=ы, comment=ы, video_id=1
+Received data: name=фы, comment=ы, video_id=1
+Received data: name=3, comment=3, video_id=1
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 6
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 5
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 6
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 5
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 6
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 6
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 5
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 5
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 6
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 5
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 6
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 5
+    [action] => like
+)
+
+
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 5
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 6
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 5
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 6
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 5
+    [action] => like
+)
+
+
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 5
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 6
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 6
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 5
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 6
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 5
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 6
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 2
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 2
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 0
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 4
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 0
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 0
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 0
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 0
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 0
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 0
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 0
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 0
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 0
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 1
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 0
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 0
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => -1
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 0
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => -1
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 0
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => -1
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 0
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => -1
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 0
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => -1
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 0
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 0
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 0
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => unlike
+)
+
+Received data: name=й, comment=й, video_id=1
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 6
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 4
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 5
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 6
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 5
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 6
+    [action] => unlike
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 5
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => undefined
+    [action] => unlike
+)
+
+Received data: name=1, comment=223, video_id=1
+Received data: name=2, comment=2, video_id=1
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 0
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 0
+    [action] => like
+)
+
+Received data: name=ууу, comment=ууу, video_id=1
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 5
+    [action] => like
+)
+
+Received data: name=ee, comment=e, video_id=1
+Received data: name=ee, comment=e, video_id=1
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 5
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 5
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 3
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 0
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 0
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 0
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 0
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 0
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 0
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 0
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 0
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 0
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 0
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 0
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 0
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 0
+    [action] => like
+)
+
+Received data: Array
+(
+    [comment_id] => undefined
+    [likes] => 0
+    [action] => like
+)
+

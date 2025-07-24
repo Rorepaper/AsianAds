@@ -1,7 +1,7 @@
 const CACHE_NAME = 'pwa-habits-cache-v1';
 const urlsToCache = [
   './',
-  './index.html',
+  './AsianAds/index.html',
   './AsianAds/manifest.json',
   './icon-192.png', 
   './icon-512.png'

@@ -3,8 +3,8 @@ const urlsToCache = [
   './',
   './AsianAds/index.html',
   './AsianAds/manifest.json',
-  './icon-192.png', 
-  './icon-512.png'
+  './AsianAds/icon-192.png', 
+  './AsianAds/icon-512.png'
 ];
 
 self.addEventListener('install', event => {

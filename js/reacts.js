@@ -1,3 +1,8 @@
+
+function hideElement(elem) {
+    elem.style.display = 'none';
+  }
+
 function getVideo() {
     let id = document.getElementById('vid').innerHTML;
     let order = localStorage.getItem('commentOrder') || '1';
